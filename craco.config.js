@@ -27,14 +27,18 @@ module.exports = {
                         javascriptEnabled: true,
                     },
                 },
+                babelPluginImportOptions: {
+                    libraryDirectory: "es",
+                },
             }
         },
     ],
     webpack: {
         alias: {
-            "@": resolve("src")
+            "@": resolve("src"),
+            "@apis": resolve("src/apis"),
+            "@moensun/antd-react-ext": resolve("src/components")
         },
-
     },
     devServer: {
         historyApiFallback: true,
