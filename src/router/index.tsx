@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { useRoutes, RouteObject } from 'react-router-dom';
-import SignInView from '../modules/account/views/sign-in';
+import SignInView from '../views/account/sign-in';
 
 export const routes: RouteObject[] = [
 	{ path: '/sign-in', element: <SignInView /> }
