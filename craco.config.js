@@ -34,8 +34,8 @@ module.exports = {
         alias: {
             "@": resolve("src"),
             "@apis": resolve("src/apis"),
-            "@views": resolve("src/views"),
-            "@components": resolve("src/components")
+            "@components": resolve("src/components"),
+            "@icons": resolve("src/icons"),
         },
     },
     devServer: {

@@ -2,7 +2,7 @@ import {Button, Form, Input} from "antd"
 import styles from "./index.module.less"
 import {LockOutlined, UserOutlined} from "@ant-design/icons";
 
-const SignInView = () => {
+const SignInPage = () => {
     const [form] = Form.useForm()
 
 
@@ -28,4 +28,4 @@ const SignInView = () => {
         </footer>
     </div>
 }
-export default SignInView
+export default SignInPage
