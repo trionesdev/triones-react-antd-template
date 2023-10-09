@@ -1,14 +1,13 @@
-import React, { lazy, Suspense } from 'react';
-import { useRoutes, RouteObject } from 'react-router-dom';
+import React, {lazy, Suspense} from 'react';
+import {RouteObject, createBrowserRouter, RouterProvider, createHashRouter} from 'react-router-dom';
 import SignInPage from "../app/(account)/sign-in/page";
 
 export const routes: RouteObject[] = [
-	{ path: '/sign-in', element: <SignInPage /> }
+    {path: '/sign-in', element: <SignInPage/>}
 ]
 
-// 生成路由
-const AppRoutes = () => {
-	return useRoutes(routes);
-};
+export const router = createHashRouter(routes);
 
-export default AppRoutes;
+export const AppRouter = ()=>{
+	return <RouterProvider router={router}/>
+}
