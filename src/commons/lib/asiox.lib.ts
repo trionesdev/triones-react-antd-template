@@ -1,7 +1,6 @@
 import axios from "axios";
 import {Exception} from "../ex/exception";
 import {getTenantUserToken} from "../util/storage.utils";
-import {RoutesConstants} from "../../router/routes.constants";
 import {notification} from "antd";
 
 const request = axios.create({
@@ -32,7 +31,7 @@ request.interceptors.response.use(function (response) {
     let status = error.response.status;
     if (status === 401) {
         //TODO
-        window.location.href = `/#${RoutesConstants.SIGN_IN.path()}`
+        // window.location.href = `/#${RoutesConstants.SIGN_IN.path()}`
     } else if (status === 500) {
         notification.error({message: '服务器异常，请稍后再试'})
         throw new Exception(500, "服务器异常，请稍后再试")
